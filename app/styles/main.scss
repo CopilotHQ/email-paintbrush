@@ -4,11 +4,13 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+$card-width:  240px;
+
+body {
+  background: #f5f5f5;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .menubar {
@@ -20,11 +22,17 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   border-bottom: 1px solid #1a1a1a;
 }
 
+.card-container {
+  display: inline-block;
+  width: $card-width;
+  margin: 0px auto;
+  background: white;
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 4px -2px;
+  overflow: auto;
+}
+
 #paletteContainer {
-  padding: 50px;
-  background: #2a2a2a;
-  border-right: 1px solid #1a1a1a;
-  box-shadow: inset #222222 -1px 0px 2px;
+  line-height: 0;
 
   #palette {
     background: url('../images/bg.jpg');
@@ -33,16 +41,21 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   }
 
   table {
-    box-shadow: #000000 0px 1px 4px;
     tr {
       td {
         height: 10px !important;
         width: 10px !important;
+        box-sizing: border-box;
         //background-image: url('../images/bg.jpg');
-        border: 1px solid #BBBBBB;
+        border: 1px solid #CCCCCC;
       }
     }
   }
+}
+
+#card-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -62,8 +75,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // Colors
   #swatches {
-    padding: 20px;
-    background: #3a3a3a;
+    text-align: left;
   }
 
 
@@ -72,8 +84,6 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
     width: 20px;
     padding: 0;
     margin: 0;
-
-    float: left;
 
     border-color: transparent;
     border-width: 1px;

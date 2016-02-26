@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>pixelart</title>
+    <title>Email Optimized Dogs</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,7 +28,7 @@
     <![endif]-->
 
 
-    <div class="container-fluid menubar">
+    <div class="container-fluid menubar" style="display:none;">
 
       <div class="row">
         <div class="col-md-12">
@@ -37,38 +37,46 @@
           <button class="btn btn-default" id="clearPixels"><span class="glyphicon glyphicon-erase" aria-hidden="true"></span> clear canvas</button>
           <button class="btn btn-default" id="dog_001Pixels">dog_001</button>
           <button class="btn btn-default" id="dog_002Pixels">dog_002</button>
-          <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> Get the code</button>
         </div>
       </div>
 
     </div>
 
-    <div class="topSection">
-      <div class="container-fluid">
-        <div class="row">
-
-          <div class="col-md-10 text-center" id="paletteContainer">
-            <div id="palette"></div>
-          </div>
-
-          <div class="col-md-2" id="swatches">
-
-            <div id="selectedSwatch"></div>
-
-            <div class="swatch" data-color="transparent"></div><br>
-            
-          </div>
-
+    <div style="text-align:center;">
+      <div class="card-container">
+        <div id="paletteContainer">
+          <div id="palette"></div>
         </div>
+
+        <div class="container-fluid" id="card-content">
+          <div class="row">
+            <div class="col-xs-12" id="swatches">
+              <div id="selectedSwatch"></div>
+
+              <div class="swatch" data-color="transparent"></div><br>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-4">
+              <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#settingsModal"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> </button>
+            </div>
+
+            <div class="col-xs-8">
+              <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#codeModal"><span class="glyphicon glyphicon-copy" aria-hidden="true"></span> Get the code</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="codeModal" tabindex="-1" role="dialog" aria-labelledby="Get the Code">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Here's your awesome dog!</h4>
+            <h4 class="modal-title" id="myModalLabel">Wow! That's beautiful!</h4>
           </div>
 
           <div class="modal-body">
@@ -85,6 +93,24 @@
 
             <textarea id="snippet" readonly="readonly"></textarea>
 
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="Settings">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Wow! That's beautiful!</h4>
+          </div>
+
+          <div class="modal-body">
           </div>
 
           <div class="modal-footer">
